@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Busca de CEP</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="container">
+    <section class="card">
+      <div class="header">
+        <h1>Busca de CEP</h1>
+        <p>Digite um CEP para encontrar o endereço automaticamente.</p>
+      </div>
+
+      <form id="cepForm">
+        <div class="input-group">
+          <label for="cep">CEP</label>
+          <input 
+            type="text" 
+            id="cep" 
+            placeholder="Ex: 53401-000" 
+            maxlength="9"
+            autocomplete="off"
+          />
+        </div>
+
+        <button type="submit" id="buscarBtn">
+          Buscar endereço
+        </button>
+      </form>
+
+      <p id="message"></p>
+
+      <div class="result" id="result">
+        <div class="result-item">
+          <span>Rua</span>
+          <strong id="logradouro">-</strong>
+        </div>
+
+        <div class="result-item">
+          <span>Bairro</span>
+          <strong id="bairro">-</strong>
+        </div>
+
+        <div class="result-item">
+          <span>Cidade</span>
+          <strong id="cidade">-</strong>
+        </div>
+
+        <div class="result-item">
+          <span>Estado</span>
+          <strong id="estado">-</strong>
+        </div>
+
+        <div class="result-item">
+          <span>DDD</span>
+          <strong id="ddd">-</strong>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
